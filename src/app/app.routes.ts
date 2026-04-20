@@ -48,6 +48,12 @@ export const routes: Routes = [
       import('./views/views-home/views-home')
         .then(m => m.ViewsHome)
   },
+  {
+    path: 'modules',
+    loadComponent: () =>
+      import('./mods/mods-home/mods-home')
+        .then(m => m.ModsHome)
+  },
 
   { path: '**', component: NotFound }
 ];
