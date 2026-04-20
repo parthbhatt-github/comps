@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { Table } from '../table/table';
 import { Divider } from '../../shared/divider/divider';
+import { RouterModule } from '@angular/router';
+import { Tabs } from '../tabs/tabs';
 
 @Component({
   selector: 'app-collection-home',
   standalone: true,
-  imports: [Table,Divider],
+  imports: [Table, Divider, RouterModule, Tabs],
   templateUrl: './collection-home.html',
   styleUrl: './collection-home.css',
 })
@@ -23,5 +25,12 @@ export class CollectionHome {
     { key: 'email', label: 'Email' }
   ];
 
+  tablists = [
+  { label: 'Biography', path: './',        exact: true  },
+  { label: 'Partners',  path: './partners', exact: false },
+  { label: 'Companies', path: './companies',exact: false },
+  ];
+
+ 
 
 }
